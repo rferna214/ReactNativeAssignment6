@@ -1,13 +1,17 @@
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import styles from './styles';
+import { useNavigation } from '@react-navigation/native';
+
 
 const Contact = props => {
 
     const post = props.post;
+    const navigation = useNavigation();
+
 
     const onPress = () => {
-        console.log(post.fullname);
+        navigation.navigate('Existing Contact', {post: post});
     }
 
   return (

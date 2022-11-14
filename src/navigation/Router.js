@@ -5,6 +5,8 @@ import HomeScreen from '../screens/Home';
 import TabNavigator from './TabNavigator';
 import AddContact from '../screens/AddContact';
 import AddGroup from '../screens/AddGroup';
+import ExistingContact from '../screens/ExistingContact';
+import AddContactGroupScreen from '../screens/AddContactGroup';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +22,11 @@ const Router = props => {
         <Stack.Screen name={'Go To Contacts!'} component={TabNavigator}/>
         <Stack.Screen name={'Add Contact'} component={AddContact}/>
         <Stack.Screen name={'Add Group'} component={AddGroup}/>
+        <Stack.Screen name={'Existing Contact'} component={ExistingContact}/>
+        <Stack.Screen name={'Add Contact Group'} component={AddContactGroupScreen}/>
+
+
+
       </Stack.Navigator>
     </NavigationContainer>
   );
